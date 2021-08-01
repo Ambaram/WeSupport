@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Users xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Users.xsd">
+    <User>
+        <Type>Admin</Type>
+        <Userid>TT12345</Userid>
+        <Name>
+            <First>John</First>
+            <Last>Smith</Last>
+        </Name>
+        <Password>12345</Password>
+        <Hashpassword/>
+        <Country>India</Country>
+        <Contact>                                    <!-- Fields required for user login(email/contact no)-->
+            <Email>john.smith@gmail.com</Email> 
+            <Phone>0012343212</Phone>
+        </Contact>
+    </User>
+    <User>
+        <Type>Client</Type>
+        <Userid>TT12334</Userid>
+        <Name>
+            <First>John</First>
+            <Last>Doe</Last>
+        </Name>
+        <Password>122123</Password>
+        <Hashpassword></Hashpassword><!-- Encrypted Password -->
+        <Country>Canada </Country>
+        <Contact>                                   <!-- Fields required for user login(email/contact no)-->
+            <Email>john.doe@gmail.com</Email>
+            <Phone>0012345312</Phone>
+        </Contact>
+    </User>
+    <User>
+        <Type>Client</Type>
+        <Userid>TT68966</Userid>
+        <Name>
+            <First>Ambaram</First>
+            <Last>Srivastava</Last>
+        </Name>
+        <Password>123</Password>
+        <Hashpassword>202cb962ac59075b964b07152d234b70</Hashpassword>
+        <Country/>
+        <Contact>
+            <Email>ambaramsrivastava@gmail.com</Email>
+            <Phone>08865863361</Phone>
+        </Contact>
+    </User>
+    <User>
+        <Type>Client</Type>
+        <Userid>TT41953</Userid>
+        <Name>
+            <First>Ambaram</First>
+            <Last>Srivastava</Last>
+        </Name><Password>123</Password>
+        <Hashpassword>202cb962ac59075b964b07152d234b70</Hashpassword>
+        <Country/>
+        <Contact>
+            <Email>ambaramsrivastava@gmail.com</Email>
+            <Phone>08865863361</Phone>
+        </Contact>
+    </User>
+</Users>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Tickets">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Ticket" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ID" minOccurs="1">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="TX[0-9][0-9][0-9][0-9][0-9]"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="Priority">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:integer">
+                                        <xs:enumeration value="1"></xs:enumeration>
+                                        <xs:enumeration value="2"></xs:enumeration>
+                                        <xs:enumeration value="3"></xs:enumeration>
+                                        <xs:enumeration value="4"></xs:enumeration>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="Client">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Name">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="First"></xs:element>
+                                                    <xs:element name="Last"></xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="Userid"></xs:element>
+                                        <xs:element name="Email"></xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Subject" minOccurs="1"></xs:element>
+                            <xs:element name="Description" minOccurs="1"></xs:element>
+                            <xs:element name="State" minOccurs="1">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="Created"></xs:enumeration>
+                                        <xs:enumeration value="Assigned"></xs:enumeration>
+                                        <xs:enumeration value="In Progress"></xs:enumeration>
+                                        <xs:enumeration value="On Hold"></xs:enumeration>
+                                        <xs:enumeration value="Resolved"></xs:enumeration>
+                                        <xs:enumeration value="Closed"></xs:enumeration>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="Admin">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Userid"></xs:element>
+                                        <xs:element name="Email"></xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Timetracking">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Created" type="Timestamp"></xs:element>
+                                        <xs:element name="Lastupdated" type="Timestamp"></xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Messages" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Message"></xs:element>
+                                        <xs:element name="Timestamp"></xs:element>
+                                        <xs:element name="Userid"></xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="Timestamp">
+        <xs:sequence>
+            <xs:element name="Date"></xs:element>
+            <xs:element name="Time"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
