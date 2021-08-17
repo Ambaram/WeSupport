@@ -2,7 +2,7 @@
 <Tickets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Support_Tickets.xsd">
     <Ticket>
         <ID>TX43433</ID>
-        <Priority>3</Priority>      <!--Priority out of (1/2/3/4)-->
+        <Priority>Medium</Priority>      <!--Priority out of (Critical/High/Medium/Low)-->
         <Client>                    <!-- Caller Details -->
             <Name>
                 <First>John</First>
@@ -12,17 +12,15 @@
             <Email>john.doe@gmail.com</Email>
         </Client>          
         <Subject>Application Down</Subject>   
-        <Description>
-            While trying to open the application i am receiving error "Application exiting with error 5404!!"
-        </Description>
-        <State>Created</State>      <!--State out of (Created/Assigned/In Progress/On Hold/Resolved/Closed)-->
+        <Description>While trying to open the application i am receiving error "Application exiting with error 5404!!"</Description>
+        <State>Pending</State>      <!--State out of (Created/Assigned/In Progress/On Hold/Resolved/Closed)-->
         <Admin>                <!-- Admin Details -->
             <Userid>TT12345</Userid>
             <Email>john.smith@gmail.com</Email>
         </Admin>
         <Timetracking>
             <Created>
-                <Date>17-02-2021</Date>
+                <Date>18-02-2021</Date>
                 <Time>08:45:04</Time>
             </Created>
             <Lastupdated>
@@ -31,14 +29,16 @@
             </Lastupdated>
         </Timetracking>
         <Messages>                     <!--Client and admin chat box can contain multiple note-->
-            <Message>Requested error screenshot from user</Message>
-            <Timestamp>01/04/2021::01:22:40</Timestamp>
-            <Userid>TT12345</Userid>        <!--Updates from user and assigned contact-->
-        </Messages>                    
+            <Message>
+                <Content>Requested error screenshot from user</Content>
+                <Timestamp>01/04/2021::01:22:40</Timestamp>
+                <Userid>TT12345</Userid>
+            </Message>     <!--Updates from user and assigned contact-->
+        <Message><Content>Screenshot provided</Content><Timestamp>2021/08/17</Timestamp><Userid>TT12334</Userid></Message><Message><Content>Resolved.</Content><Timestamp>2021/08/17</Timestamp><Userid>TT12334</Userid></Message></Messages>                    
     </Ticket>
     <Ticket>
         <ID>TX23232</ID>
-        <Priority>2</Priority>      <!--Priority out of (1/2/3/4)-->
+        <Priority>High</Priority>      <!--Priority out of (1/2/3/4)-->
         <Client>                    <!-- Caller Details -->
             <Name>
                 <First>Ambaram</First>
@@ -48,12 +48,10 @@
             <Email>ambaramsrivastava@gmail.com</Email>
         </Client>
         <Subject>Login Failed</Subject>
-        <Description>
-            "Login failure!! Could not login user at this time. Please contact system administrator"
-        </Description>
-        <State>In Progress</State>      <!--State out of (Created/Assigned/In Progress/On Hold/Resolved/Closed)-->
+        <Description>Login failure!! Could not login user at this time. Please contact system administrator</Description>
+        <State>Closed</State>      <!--State out of (Created/Assigned/In Progress/On Hold/Resolved/Closed)-->
         <Admin>                <!-- Admin Details -->
-            <Userid>TT12345</Userid>
+            <Userid>TT12333</Userid>
             <Email>johnsmitch@gmail.com</Email>
         </Admin>
         <Timetracking>
@@ -62,32 +60,37 @@
                 <Time>08:45:04</Time>
             </Created>
             <Lastupdated>
-                <Date>18-02-2021</Date>
+                <Date>19-02-2021</Date>
                 <Time>09:21s:04</Time>
             </Lastupdated>
         </Timetracking>
         <Messages>                     <!--Client and admin chat box can contain multiple note-->
-            <Message>Requested error screenshot from user</Message>
-            <Timestamp>01/04/2021::01:22:40</Timestamp>
-            <Userid>TT12345</Userid>        <!--Updates from user and assigned contact-->
-        </Messages>
+            <Message>
+                <Content>Requested error screenshot from user</Content>
+                <Timestamp>01/04/2021::01:22:40</Timestamp>
+                <Userid>TT12345</Userid>        <!--Updates from user and assigned contact-->
+            </Message>
+            <Message>
+                <Content>Screenshot provided. Issue still persists.</Content>
+                <Timestamp>01/04/2021::22:10:45</Timestamp>
+                <Userid>TT68966</Userid>
+            </Message>
+        <Message><Content>Resolved.</Content><Timestamp>2021/08/17</Timestamp><Userid>TT68966</Userid></Message></Messages>
     </Ticket>
     <Ticket>
         <ID>TX45321</ID>
-        <Priority>3</Priority>      <!--Priority out of (1/2/3/4)-->
+        <Priority>High</Priority>      <!--Priority out of (1/2/3/4)-->
         <Client>                    <!-- Caller Details -->
             <Name>
                 <First>John</First>
                 <Last>Doe</Last>
             </Name>
-            <Userid>2</Userid>
+            <Userid>TT12334</Userid>
             <Email>john.doe@gmail.com</Email>
         </Client>
         <Subject>Application Down</Subject>
-        <Description>
-            While trying to open the application i am receiving error "Application exiting with error 5404!!"
-        </Description>
-        <State>Created</State>      <!--State out of (Created/Assigned/In Progress/On Hold/Resolved/Closed)-->
+        <Description>While trying to open the application i am receiving error "Application exiting with error 5404!!"</Description>
+        <State>Closed</State>      <!--State out of (Created/Assigned/In Progress/On Hold/Resolved/Closed)-->
         <Admin>                <!-- Admin Details -->
             <Userid>TT12345</Userid>
             <Email>john.smith@gmail.com</Email>
@@ -103,9 +106,11 @@
             </Lastupdated>
         </Timetracking>
         <Messages>                     <!--Client and admin chat box can contain multiple note-->
-            <Message>Requested error screenshot from user</Message>
-            <Timestamp>01/04/2021::01:22:40</Timestamp>
-            <Userid>1/2</Userid>        <!--Updates from user and assigned contact-->
-        </Messages>
+            <Message>
+                <Content>Requested error screenshot from user</Content>
+                <Timestamp>01/04/2021::01:22:40</Timestamp>
+                <Userid>1/2</Userid>        <!--Updates from user and assigned contact-->
+            </Message>
+        <Message><Content>Screenshot Provided</Content><Timestamp>2021/08/13</Timestamp><Userid>TT12334</Userid></Message><Message><Content>Resolved.</Content><Timestamp>2021/08/13</Timestamp><Userid>TT12334</Userid></Message></Messages>
     </Ticket>
 </Tickets>

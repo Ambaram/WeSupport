@@ -1,4 +1,9 @@
+<!-- a logout page will redirect to the login page -->
 <?php
-session_start();
+session_start() ;
+unset($_SESSION['id']) ;
 session_destroy();
-header("Location : login.php");
+echo '<META HTTP-EQUIV="Refresh" Content="0; URL=login.php">';
+exit;
+?>
+

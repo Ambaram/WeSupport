@@ -51,7 +51,8 @@
         <Name>
             <First>Ambaram</First>
             <Last>Srivastava</Last>
-        </Name><Password>123</Password>
+        </Name>
+        <Password>1234</Password>
         <Hashpassword>202cb962ac59075b964b07152d234b70</Hashpassword>
         <Country/>
         <Contact>

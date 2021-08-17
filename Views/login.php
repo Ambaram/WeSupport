@@ -1,16 +1,19 @@
+<!-- User Login Page -->
 <?php
+// load the xml files
 $userxml = simplexml_load_file('../Data/Users/Users.xml');
 $ticketxml = simplexml_load_file('../Data/Tickets/Support_Tickets.xml');
 ?>
 <?php
+// get all the children from userxml to verify the details entered while logging in
 $users = $userxml->children();
 $iderror = "";
 $passerror = "";
 $parent = "";
 $user = array();
 $passwords = array();
-$ids = $users->xpath("//User/Userid");
-$passes = $users->xpath("//User/Password");
+$ids = $users->xpath("//User/Userid"); // get all the userids.
+$passes = $users->xpath("//User/Password"); // get all the passwords.
 foreach ($ids as $x)
 {
     $i = strip_tags($x->asXML());
@@ -36,6 +39,7 @@ if(isset($_POST['login']))
             {
                 if (array_search($id,$user) == array_search($pass,$passwords))
                 {
+                    // if userid and password matches, user will be logged in
                     session_start();
                     $_SESSION['id'] = $id;
                     header("Location: listtickets.php?id='$id'");
@@ -55,15 +59,8 @@ if(isset($_POST['login']))
         }
     }
 
+include_once 'header.php';
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Login</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-</head>
-<body>
 <main>
     <h1 class="h3 text-center">Login to view tickets</h1>
     <form action="" method="post" class ="col-md-6 m-auto">
@@ -81,6 +78,10 @@ if(isset($_POST['login']))
             </div>
         </div>
     </form>
+    <div class="text-center">
+        <h2 class="h5">Don't have an account</h2>
+        <a href="register.php">Register Here</a>
+    </div>
 </main>
-</body>
-</html>
+
+<?php include_once 'footer.php'?>

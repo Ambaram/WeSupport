@@ -1,7 +1,11 @@
+<!-- User registration page -->
 <?php
+// laod the userxml file
 $userxml = simplexml_load_file("../Data/Users/Users.xml");
 ?>
 <?php
+// if register button is pressed, user will be created by appending to Users.xml
+// direct password and hash value both are being saved as of now for the simplicity purpose.
 if (isset($_POST['register'])){
     $userid = 'TT'.rand(10000,99999);
     $passerror = "";
@@ -30,32 +34,19 @@ if (isset($_POST['register'])){
         $passerror = "Passwords do not match";
     }
 }
+
+include_once 'header.php';
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Register</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width initial-scale = 1.0">
-    <meta name="description" content="registration page">
-</head>
-<body>
-<form class="" action="" method="post">
+<form class="container p-4" action="" method="post">
     <div class="row container col-md-6 m-auto">
         <label class="form-group m-auto">User Type: </label>
         <div class="form-check m-auto">
             <input class="form-check-input" type="radio" name="type" id="client" value="Client">
-            <label class="form-check-label" for="client">
-                Client
-            </label>
+            <label class="form-check-label" for="client">Client</label>
         </div>
         <div class="form-check m-auto p-4">
             <input class="form-check-input" name="type" value="Admin" id="admin" type="radio">
-            <label class="form-check-label" for="admin">
-                Admin
-            </label>
+            <label class="form-check-label" for="admin">Admin</label>
         </div>
     </div>
     <div class="container">
@@ -95,5 +86,4 @@ if (isset($_POST['register'])){
         </div>
     </div>
 </form>
-</body>
-</html>
+<?php include_once "footer.php";?>

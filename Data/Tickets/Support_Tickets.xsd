@@ -15,11 +15,11 @@
                             </xs:element>
                             <xs:element name="Priority">
                                 <xs:simpleType>
-                                    <xs:restriction base="xs:integer">
-                                        <xs:enumeration value="1"></xs:enumeration>
-                                        <xs:enumeration value="2"></xs:enumeration>
-                                        <xs:enumeration value="3"></xs:enumeration>
-                                        <xs:enumeration value="4"></xs:enumeration>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="Critical"></xs:enumeration>
+                                        <xs:enumeration value="High"></xs:enumeration>
+                                        <xs:enumeration value="Medium"></xs:enumeration>
+                                        <xs:enumeration value="Low"></xs:enumeration>
                                     </xs:restriction>
                                 </xs:simpleType>
                             </xs:element>
@@ -47,8 +47,7 @@
                                         <xs:enumeration value="Created"></xs:enumeration>
                                         <xs:enumeration value="Assigned"></xs:enumeration>
                                         <xs:enumeration value="In Progress"></xs:enumeration>
-                                        <xs:enumeration value="On Hold"></xs:enumeration>
-                                        <xs:enumeration value="Resolved"></xs:enumeration>
+                                        <xs:enumeration value="Pending"></xs:enumeration>
                                         <xs:enumeration value="Closed"></xs:enumeration>
                                     </xs:restriction>
                                 </xs:simpleType>
@@ -69,13 +68,19 @@
                                     </xs:sequence>
                                 </xs:complexType>
                             </xs:element>
-                            <xs:element name="Messages" maxOccurs="unbounded">
+                            <xs:element name="Messages">
                                 <xs:complexType>
                                     <xs:sequence>
-                                        <xs:element name="Message"></xs:element>
-                                        <xs:element name="Timestamp"></xs:element>
-                                        <xs:element name="Userid"></xs:element>
-                                    </xs:sequence>
+                                        <xs:element name="Message" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="Content"></xs:element>
+                                                <xs:element name="Timestamp"></xs:element>
+                                                <xs:element name="Userid"></xs:element>
+                                            </xs:sequence>
+                                        </xs:complexType>
+                                        </xs:element>
+                                        </xs:sequence>
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
