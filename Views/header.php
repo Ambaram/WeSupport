@@ -14,7 +14,7 @@
 <header>
     <nav class="navbar" id="nav">
         <a class="navbar-brand" href="../Views/listtickets.php">
-            <img src="../images/picture" class="w-50 m-2" alt="logo">
+            <img src="../images/logo.png" class="w-50 m-2" alt="logo">
         </a>
         <div class="navbar navbar-sm-collapse text-dark" id="fixnav">
             <div class="navbar-nav d-flex flex-row" id="links">
