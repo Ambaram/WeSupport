@@ -9,3 +9,4 @@
 -[x] Admin users can view all the tickets and can make changes if needed.
 -[x] Users can log tickets for any issues that they are having.
 -[x] Secure login and logout functionality.
+-[x] Website has been deployed using netlify.
