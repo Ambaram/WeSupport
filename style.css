@@ -1,0 +1,39 @@
+body{
+    color: #c8d8e4;
+    height: 600px;
+    background-image: url("/images/technical-support-customer-service-business-260nw-1147407617.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav a{
+    color:#c8d8e4;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+main{
+    margin-top: 0;
+    margin-left: 5em;
+    letter-spacing: 1px;
+    white-space: pre-line;
+}
+
+h1{
+    font-weight: bold;
+}
+
+section{
+    margin-top: 10em;
+}
+
+#what , #connect{
+    background-color: #205072;
+    color: #cff4d3;
+}
+
+#how{
+    background-color: #cff4d2;
+    color: #205072;
+}
