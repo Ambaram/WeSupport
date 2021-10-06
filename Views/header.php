@@ -24,7 +24,7 @@
 if (isset($_SESSION['id'])) {?>
                     <a class="nav-item nav-link py-4 px-3 text-info" id="navbar-link" href="../Views/login.php">Logout</a>
                 <?php } else {?>
-                    <a class="nav-item nav-link py-4 px-3 text-info" id="navbar-link" href="./logout.php">Login / Signup</a>
+                    <a class="nav-item nav-link py-4 px-3 text-info" id="navbar-link" href="../Views/logout.php">Login / Signup</a>
                <?php }?>
             </div>
         </div>
