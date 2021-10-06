@@ -1,7 +1,7 @@
 <!-- footer file to be included for all the pages -->
 <footer class="container-fluid mt-5" id="contact">
     <div class="text-dark">
-        <h2 class="h3 text-center text-monospace">Contact Details</h2>
+        <h2 class="h3 text-center text-monospace">Connect with us!!</h2>
         <div class="row justify-content-center">
           <div class="col-sm-12 d-flex flex-row justify-content-center">
             <div class="col-sm-5 text-center m-3 p-2 border border-dark ">
@@ -22,7 +22,7 @@
     </div>
     <div class="container text-center mt-5 pb-5">
         <h2 class="h3 text-monospace">About this website </h2>
-        <p>This website is built using PHP, SimpleXML, HTML, Bootstrap, CSS and deployed using Netlify.</p>
+        <p>This application is built using PHP, SimpleXML, HTML, Bootstrap, CSS and deployed using Heroku.</p>
         <h2 class="h5 text-monospace">Designed and Built by Ambaram</h2>
         <a href="https://angry-heisenberg-42a4fb.netlify.app/" class="text-info text-monospace ">Visit Developer's Portfolio</a>
     </div>

@@ -8,10 +8,11 @@
             <Last>Smith</Last>
         </Name>
         <Password>12345</Password>
-        <Hashpassword/>
+        <Hashpassword />
         <Country>India</Country>
-        <Contact>                                    <!-- Fields required for user login(email/contact no)-->
-            <Email>john.smith@gmail.com</Email> 
+        <Contact>
+            <!-- Fields required for user login(email/contact no)-->
+            <Email>john.smith@gmail.com</Email>
             <Phone>0012343212</Phone>
         </Contact>
     </User>
@@ -23,9 +24,10 @@
             <Last>Doe</Last>
         </Name>
         <Password>122123</Password>
-        <Hashpassword></Hashpassword><!-- Encrypted Password -->
+        <Hashpassword /> <!-- Encrypted Password -->
         <Country>Canada </Country>
-        <Contact>                                   <!-- Fields required for user login(email/contact no)-->
+        <Contact>
+            <!-- Fields required for user login(email/contact no)-->
             <Email>john.doe@gmail.com</Email>
             <Phone>0012345312</Phone>
         </Contact>
@@ -39,7 +41,7 @@
         </Name>
         <Password>123</Password>
         <Hashpassword>202cb962ac59075b964b07152d234b70</Hashpassword>
-        <Country/>
+        <Country />
         <Contact>
             <Email>ambaramsrivastava@gmail.com</Email>
             <Phone>08865863361</Phone>
@@ -54,10 +56,55 @@
         </Name>
         <Password>1234</Password>
         <Hashpassword>202cb962ac59075b964b07152d234b70</Hashpassword>
-        <Country/>
+        <Country />
         <Contact>
             <Email>ambaramsrivastava@gmail.com</Email>
             <Phone>08865863361</Phone>
+        </Contact>
+    </User>
+    <User>
+        <Type>Client</Type>
+        <Userid>TT99500</Userid>
+        <Name>
+            <First>Puspa</First>
+            <Last>Srivastava</Last>
+        </Name>
+        <Password>Pushpa1964</Password>
+        <Hashpassword>902672beddfe80daa7ee59bc964714ac</Hashpassword>
+        <Country />
+        <Contact>
+            <Email>puspa.sriv@gmail.com</Email>
+            <Phone>9532704764</Phone>
+        </Contact>
+    </User>
+    <User>
+        <Type>Client</Type>
+        <Userid>TT83892</Userid>
+        <Name>
+            <First>Ambaram</First>
+            <Last>Srivastava</Last>
+        </Name>
+        <Password>1234</Password>
+        <Hashpassword>81dc9bdb52d04dc20036dbd8313ed055</Hashpassword>
+        <Country />
+        <Contact>
+            <Email>ambaramsrivastava@gmail.com</Email>
+            <Phone>+919456012695</Phone>
+        </Contact>
+    </User>
+    <User>
+        <Type>Client</Type>
+        <Userid>TT38975</Userid>
+        <Name>
+            <First>Ambaram</First>
+            <Last>Srivastava</Last>
+        </Name>
+        <Password>1234</Password>
+        <Hashpassword>81dc9bdb52d04dc20036dbd8313ed055</Hashpassword>
+        <Country />
+        <Contact>
+            <Email>ambaramsrivastava@gmail.com</Email>
+            <Phone />
         </Contact>
     </User>
 </Users>

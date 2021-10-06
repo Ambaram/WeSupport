@@ -1,6 +1,7 @@
 <?php
-    include_once './Views/header.php';
+    include_once '../Views/header.php';
 ?>
+<link rel="stylesheet" href="../style.css" />
       <main role="main" class="m-0 text-light" id="cover">
         <h1 class="cover-heading text-monospace">Help has Arrived.</h1>
         <p class="lead">
@@ -16,27 +17,27 @@
           <div class="col-sm-9 d-flex flex-row justify-content-center">
           <div class="col-sm-3 text-center m-3 mt-0 p-2" id="what">
               <div>
-              <img src="./images/help.png" alt="about" class="rounded-circle w-100">
+              <img src="../images/help.png" alt="about" class="rounded-circle w-100">
               </div>
               <h2 class="text-center mt-3 p-2 h3 text-monospace">What we Do?</h2>
               <p>We provide help to our customers who are having any sort of issues with their IT services.</p>
               <a class="btn border border-success text-monospace text-success" href="#cover">About Us</a>
           </div>
           <div class="col-sm-3 text-center m-3 p-2" id="how">
-              <img src="./images/staff.png" alt="staff" class=" rounded-circle w-75">
+              <img src="../images/staff.png" alt="staff" class=" rounded-circle w-75">
               <h2 class="mt-3 p-2  h3 text-monospace">How we do?</h2>
               <p>We have a team of trained support staff to assist you with your problems.</p>
               <a class="btn border border-info text-monospace text-info" href="#contact">Our Team</a>
           </div>
           <div class="col-sm-3 text-center m-3 p-3" id="connect">
-              <img src="./images/ticket.jpeg" alt="ticket" class="rounded-circle w-75">
+              <img src="../images/ticket.jpeg" alt="ticket" class="rounded-circle w-75">
               <h2 class="mt-3 p-2 text-monospace h3">New Ticket</h2>
               <p>If you are having any issues you can log a new ticket and we will assist you with your problem.</p>
-              <a class="btn border border-success text-monospace text-success" href="./Views/newticket.php">Raise new Ticket</a>
+              <a class="btn border border-success text-monospace text-success" href="../Views/newticket.php">Raise new Ticket</a>
           </div>
 </div>
       </section>
-      <?php include_once './Views/footer.php'?>
+      <?php include_once '../Views/footer.php'?>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

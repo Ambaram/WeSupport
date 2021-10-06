@@ -1,7 +1,6 @@
 <!-- List of all the tickets present in the system -->
 <!-- all the tickets will be visible to an admin user.Only ticket opened by specific client will be visible to that specific client--->
 <?php
-session_start();
 // load the user and ticket xml
 $ticketxml = simplexml_load_file('../Data/Tickets/Support_Tickets.xml');
 $userxml = simplexml_load_file("../Data/Users/Users.xml");
@@ -57,12 +56,8 @@ if(isset($_SESSION['id'])) {
                 "</td>"."</tr>";
         }
     }
-    // this might be useless as the user will be either a client or an admin.
-   /* else{
-        $rows = "You don't have any tickets" ;
-    } */
 }
-include_once 'header.php'
+include_once '../Views/header.php'
 ?>
 
 <main id="main">
@@ -87,4 +82,4 @@ include_once 'header.php'
         </table>
     </div>
 </main>
-<?php include_once 'footer.php'?>
+<?php include_once '../Views/footer.php'?>
