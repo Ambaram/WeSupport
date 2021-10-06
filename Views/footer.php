@@ -24,6 +24,6 @@
         <h2 class="h3 text-monospace">About this website </h2>
         <p>This application is built using PHP, SimpleXML, HTML, Bootstrap, CSS and deployed using Heroku.</p>
         <h2 class="h5 text-monospace">Designed and Built by Ambaram</h2>
-        <a href="https://angry-heisenberg-42a4fb.netlify.app/" class="text-info text-monospace ">Visit Developer's Portfolio</a>
+        <a href="https://www.ambaram.info" class="text-info text-monospace ">Visit Developer's Portfolio</a>
     </div>
 </footer>

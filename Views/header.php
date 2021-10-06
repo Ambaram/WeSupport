@@ -1,5 +1,4 @@
 <!-- header file to be included for all the pages -->
-<?php ob_start();?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
