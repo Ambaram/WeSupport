@@ -1,26 +1,35 @@
 <?php
-$priorities = ["Critical","High","Medium","Low"];
-if(isset($_POST['save'])){
+include_once "../Views/header.php";
+$userxml = simplexml_load_file("../Data/Tickets/Support_Tickets.xml");
+$priorities = ["Critical", "High", "Medium", "Low"];
+if (isset($_POST['save'])) {
     if (isset($_SESSION['id'])) {
+        $tid = "TT" . rand(10000, 99999);
         $name = $_POST['client'];
         $name = $_POST['subject'];
         $name = $_POST['created'];
         $name = $_POST['priority'];
         $name = $_POST['description'];
-        $name = $_POST[''];
-        $name = $_POST['priority'];
         header('Location:../Views/index.php');
     } else {
         header('Location:../Views/login.php');
     }
 }
-include_once '../Views/header.php';
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
 <form action="" method="post">
     <div class="row container m-auto">
         <div class="col-sm-6 form-group">
             <label for="client">Name(required)</label>
-            <input required type="text" class="form-control" name="client" id="client" value="<?php echo $first . " ".$last ?>">
+            <input required type="text" class="form-control" name="client" id="client" value="<?php echo $first . " " . $last ?>">
         </div>
         <div class="col-sm-6 form-group">
             <label for="subject">Application Name(required)</label>
@@ -34,11 +43,11 @@ include_once '../Views/header.php';
             <label for="priority">Priority(required)</label>
             <select required name="priority" id="priority" class="form-control">
                 <?php foreach ($priorities as $ids => $option) {?>
-                <option value="<?php echo $option?>"<?php
-                if($option == $priority){
-                echo "selected";
-                }?>><?php echo $option ?></option>
-                <?php } ?>
+                <option value="<?php echo $option ?>"<?php
+if ($option == $priority) {
+    echo "selected";
+}?>><?php echo $option ?></option>
+                <?php }?>
             </select>
         </div>
         <div  class="col-sm-12 form-group m-auto">
@@ -47,7 +56,7 @@ include_once '../Views/header.php';
         </div>
         <div class="col-sm-12 form-group m-auto">
             <label for="messages">Messages</label>
-            <?php echo $box?>
+            <?php echo $box ?>
         </div>
         <div class="col-sm-12 form-group">
             <label for="new" class="form-label">Any Other Comment</label>
@@ -56,11 +65,13 @@ include_once '../Views/header.php';
         </div>
         <div class="col-sm-2 form-group">
             <input type="hidden" value="<?php echo $t_id ?>" name='t_id' id="t_id" class="form-control">
-            <input type="hidden" value="<?php echo $state?>" name='none' id="state" class="form-control">
+            <input type="hidden" value="<?php echo $state ?>" name='none' id="state" class="form-control">
             <input type="submit" value="Save" name="save" id="save" class="form-control col-sm-9 btn btn-success">
         </div>
     </div>
 </form>
+</body>
+</html>
 <?php
 include_once './footer.php';
 ?>

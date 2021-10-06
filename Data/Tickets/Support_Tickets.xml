@@ -34,7 +34,7 @@
                 <Timestamp>01/04/2021::01:22:40</Timestamp>
                 <Userid>TT12345</Userid>
             </Message>     <!--Updates from user and assigned contact-->
-        <Message><Content>Screenshot provided</Content><Timestamp>2021/08/17</Timestamp><Userid>TT12334</Userid></Message><Message><Content>Resolved.</Content><Timestamp>2021/08/17</Timestamp><Userid>TT12334</Userid></Message></Messages>                    
+        <Message><Content>Screenshot provided</Content><Timestamp>2021/08/17</Timestamp><Userid>TT12334</Userid></Message><Message><Content>Resolved.</Content><Timestamp>2021/08/17</Timestamp><Userid>TT12334</Userid></Message><Message><Content>OPEN</Content><Timestamp>2021/10/06</Timestamp><Userid>TT12334</Userid></Message></Messages>                    
     </Ticket>
     <Ticket>
         <ID>TX23232</ID>

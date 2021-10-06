@@ -1,13 +1,10 @@
-<!-- List of all the tickets present in the system -->
-<!-- all the tickets will be visible to an admin user.Only ticket opened by specific client will be visible to that specific client--->
 <?php
+include_once "../Views/header.php";
 // load the user and ticket xml
-$ticketxml = simplexml_load_file('../Data/Tickets/Support_Tickets.xml');
+$ticketxml = simplexml_load_file("../Data/Tickets/Support_Tickets.xml");
 $userxml = simplexml_load_file("../Data/Users/Users.xml");
-?>
-<?php
 $rows = "";
-if(isset($_SESSION['id'])) {
+if (isset($_SESSION['id'])) {
     $id = $_SESSION['id'];
 // generate the required list by getting node data of specific ticket using xpath.
     // client will see only their tickets
@@ -35,35 +32,41 @@ if(isset($_SESSION['id'])) {
 
     }
     // admin will see all the tickets.
-    elseif($userxml->xpath("//User/Userid[text()='$id']/../Type[text()='Admin']")){
+    elseif ($userxml->xpath("//User/Userid[text()='$id']/../Type[text()='Admin']")) {
         $t = $ticketxml->children();
-        for ($i=0;$i<count($t);$i++) {
-            $t_id = $t[$i]->ID ;
+        for ($i = 0; $i < count($t); $i++) {
+            $t_id = $t[$i]->ID;
             $rows .= "<tr>";
-            $rows .= "<td>".$t[$i]->ID."</td>".
-                "<td>".$t[$i]->Priority."</td>".
-                "<td>".$t[$i]->Subject."</td>".
-                "<td>".$t[$i]->State."</td>".
-                "<td>".$t->xpath("//Timetracking/Created/Date")[$i]."</td>".
-                "<td>".$t->xpath("//Client/Name/First")[$i]." ".$t->xpath("//Client/Name/Last")[$i]."</td>".
-                "<td>".$t->xpath("//Admin/Userid")[$i]."</td>".
-                "<td>".$t->xpath("//Timetracking/Lastupdated/Date")[$i]."</td>".
-                "<td>".
+            $rows .= "<td>" . $t[$i]->ID . "</td>" .
+            "<td>" . $t[$i]->Priority . "</td>" .
+            "<td>" . $t[$i]->Subject . "</td>" .
+            "<td>" . $t[$i]->State . "</td>" .
+            "<td>" . $t->xpath("//Timetracking/Created/Date")[$i] . "</td>" .
+            "<td>" . $t->xpath("//Client/Name/First")[$i] . " " . $t->xpath("//Client/Name/Last")[$i] . "</td>" .
+            "<td>" . $t->xpath("//Admin/Userid")[$i] . "</td>" .
+            "<td>" . $t->xpath("//Timetracking/Lastupdated/Date")[$i] . "</td>" .
+                "<td>" .
                 "<form method='post' action= 'ticketdetail.php?id=$t_id'>" .
                 "<input type = 'hidden' name='t_id' value='$t_id'/>" .
                 "<input type='submit' id='ticket' name = 'ticket' value='View Details' class='btn btn-primary'/>" .
-                "</form> ".
-                "</td>"."</tr>";
+                "</form> " .
+                "</td>" . "</tr>";
         }
     }
-}
-include_once '../Views/header.php'
-?>
-
-<main id="main">
-    <div id="ticketlist" class="container">
-        <table class="table table-striped table-responsive m-auto p-4">
-            <thead>
+}?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8 without BOM">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <main id="main" class="mt-0 pt-0">
+    <div id="ticketlist" class="container text-center mt-0 mb-0">
+        <table class="table table-striped text-center table-responsive mx-auto my-0 p-0 pt-0">
+            <thead class="mx-auto">
                 <tr class="text-center">
                     <th scope="col">ID</th>
                     <th scope="col">Priority</th>
@@ -77,9 +80,11 @@ include_once '../Views/header.php'
                 </tr>
             </thead>
             <tbody class="text-center">
-                <?php  echo $rows; ?>
+                <?php echo $rows; ?>
             </tbody>
         </table>
     </div>
 </main>
+</body>
+</html>
 <?php include_once '../Views/footer.php'?>

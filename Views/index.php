@@ -1,14 +1,23 @@
 <?php
-    include_once '../Views/header.php';
+include_once '../Views/header.php';
 ?>
-<link rel="stylesheet" href="../style.css" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8 without BOM">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <title>Document</title>
+</head>
+<body>
       <main role="main" class="m-0 text-light" id="cover">
         <h1 class="cover-heading text-monospace">Help has Arrived.</h1>
         <p class="lead">
-            WeSupport is an IT Service Management tool. We are trained to 
-            cater to your daily needs of having a smooth IT infra pipeline. 
-            With our highly available and experienced support team, 
-            we intend to keep you out of daily IT problems without even asking 
+            WeSupport is an IT Service Management tool. We are trained to
+            cater to your daily needs of having a smooth IT infra pipeline.
+            With our highly available and experienced support team,
+            we intend to keep you out of daily IT problems without even asking
             and solve issues, if any.
         </p>
       </main>
@@ -35,8 +44,10 @@
               <p>If you are having any issues you can log a new ticket and we will assist you with your problem.</p>
               <a class="btn border border-success text-monospace text-success" href="../Views/newticket.php">Raise new Ticket</a>
           </div>
-</div>
+        </div>
       </section>
+</body>
+</html>
       <?php include_once '../Views/footer.php'?>
 
     <!-- Bootstrap core JavaScript

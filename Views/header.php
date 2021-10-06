@@ -1,8 +1,8 @@
-<!-- header file to be included for all the pages -->
+<?php session_start()?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8 without BOM">
     <meta name="description" content="ambaram portfolio">
     <meta name="viewport" content="width=device-width initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -13,7 +13,7 @@
 </head>
 <body class="container-fluid p-0">
 <header>
-    <nav class="navbar justify-content-center" id="nav">
+    <nav class="navbar justify-content-center m-0" id="nav">
         <div class="navbar navbar-sm-collapse text-monospace" id="fixnav">
             <div class="navbar-nav d-flex flex-row" id="links">
                 <a class="nav-item nav-link py-4 px-3 text-info" id="navbar-link" href="/Views/index.php#about">About us</a>
@@ -22,12 +22,12 @@
                     <img src="../images/picture.png" class="rounded-circle w-50" alt="logo">
                 </a>
                 <a class="nav-item nav-link py-4 px-4 text-info" id="navbar-link" href="#contact">Contact</a>
-                <?php if(isset($_SESSION['id'])){?>
+                <?php
+if (isset($_SESSION['id'])) {?>
                     <a class="nav-item nav-link py-4 px-3 text-info" id="navbar-link" href="../Views/login.php">Logout</a>
-                <?php }
-                else{ ?>
+                <?php } else {?>
                     <a class="nav-item nav-link py-4 px-3 text-info" id="navbar-link" href="../Views/logout.php">Login / Signup</a>
-               <?php } ?>
+               <?php }?>
             </div>
         </div>
     </nav>

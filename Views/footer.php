@@ -1,5 +1,13 @@
-<!-- footer file to be included for all the pages -->
-<footer class="container-fluid mt-5" id="contact">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8 without BOM">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<footer class="container-fluid mt-0" id="contact">
     <div class="text-dark">
         <h2 class="h3 text-center text-monospace">Connect with us!!</h2>
         <div class="row justify-content-center">
@@ -27,3 +35,5 @@
         <a href="https://www.ambaram.info" class="text-info text-monospace ">Visit Developer's Portfolio</a>
     </div>
 </footer>
+</body>
+</html>

@@ -1,13 +1,22 @@
 <?php
-    include_once './Views/header.php';
+include_once '../Views/header.php';
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8 without BOM">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
       <main role="main" class="m-0 text-light" id="cover">
         <h1 class="cover-heading text-monospace">Help has Arrived.</h1>
         <p class="lead">
-            WeSupport is an IT Service Management tool. We are trained to 
-            cater to your daily needs of having a smooth IT infra pipeline. 
-            With our highly available and experienced support team, 
-            we intend to keep you out of daily IT problems without even asking 
+            WeSupport is an IT Service Management tool. We are trained to
+            cater to your daily needs of having a smooth IT infra pipeline.
+            With our highly available and experienced support team,
+            we intend to keep you out of daily IT problems without even asking
             and solve issues, if any.
         </p>
       </main>
@@ -36,13 +45,15 @@
           </div>
 </div>
       </section>
+</body>
+<script src="../../../../../Cover%20Template%20for%20Bootstrap_files/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../../../../Cover%20Template%20for%20Bootstrap_files/popper.min.js"></script>
+    <script src="../../../../../Cover%20Template%20for%20Bootstrap_files/bootstrap.min.js"></script>
+    </div>
+</html>
       <?php include_once './Views/footer.php'?>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="../../../../../Cover%20Template%20for%20Bootstrap_files/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="../../../../../Cover%20Template%20for%20Bootstrap_files/popper.min.js"></script>
-    <script src="../../../../../Cover%20Template%20for%20Bootstrap_files/bootstrap.min.js"></script>
-    </div>

@@ -1,20 +1,20 @@
-<!-- User registration page -->
 <?php
+include_once "../Views/header.php";
 // laod the userxml file
 $userxml = simplexml_load_file("../Data/Users/Users.xml");
 ?>
 <?php
 // if register button is pressed, user will be created by appending to Users.xml
 // direct password and hash value both are being saved as of now for the simplicity purpose.
-if (isset($_POST['register'])){
-    $userid = 'TT'.rand(10000,99999);
+if (isset($_POST['register'])) {
+    $userid = 'TT' . rand(10000, 99999);
     $passerror = "";
     $typeerror = "";
     $hashp = md5($_POST['password']);
     $confirm = ($_POST['confirm']);
     $password = $_POST['password'];
     if (isset($_POST['type'])) {
-        if ($password==$confirm) {
+        if ($password == $confirm) {
             $user = $userxml->addChild('User');
             $user->addChild('Type', $_POST['type']);
             $user->addChild('Userid', $userid);
@@ -32,17 +32,23 @@ if (isset($_POST['register'])){
         } else {
             $passerror = "Passwords do not match";
         }
-    }
-    else{
-       $typeerror = "Please select user type"; 
+    } else {
+        $typeerror = "Please select user type";
     }
 }
-
-include_once 'header.php';
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8 without BOM">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
 <form class="container p-4 border border-info" action="./login.php" method="post">
     <div class="row container col-md-6 m-auto">
-        <label class="form-group m-auto">User Type(choose a role):<?php $typeerror ?> </label>
+        <label class="form-group m-auto">User Type(choose a role):<?php $typeerror?> </label>
         <div class="form-check m-auto">
             <input class="form-check-input" type="radio" name="type" id="client" value="Client">
             <label class="form-check-label" for="client">Client</label>
@@ -87,8 +93,10 @@ include_once 'header.php';
             <div class="col-md-6 text-center m-auto pt-2">
                 <input type="submit" name="register" value="Register" class="btn btn-primary">
             </div>
-            
+
         </div>
     </div>
 </form>
+</body>
+</html>
 <?php include_once "footer.php";
