@@ -76,4 +76,4 @@ if (isset($_SESSION['id'])) {
         </table>
     </div>
 </main>
-<?php include_once '../Views/footer.php'?>
+<?php include_once './footer.php'?>

@@ -1,5 +1,5 @@
 <?php
-include_once "../Views/header.php";
+include_once "./header.php";
 // load the ticket and user xml file
 $ticketxml = simplexml_load_file('../Data/Tickets/Support_Tickets.xml');
 $userxml = simplexml_load_file('../Data/Users/Users.xml');
@@ -142,4 +142,4 @@ if ($option == $state) {
 </form>
 </body>
 </html>
-<?php include_once 'footer.php'?>
+<?php include_once './footer.php'?>

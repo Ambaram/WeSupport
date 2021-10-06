@@ -1,5 +1,5 @@
 <?php
-include_once "../Views/header.php";
+include_once "./header.php";
 $userxml = simplexml_load_file("../Data/Tickets/Support_Tickets.xml");
 $priorities = ["Critical", "High", "Medium", "Low"];
 if (isset($_POST['save'])) {
