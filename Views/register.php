@@ -1,5 +1,5 @@
 <?php
-include_once "../Views/header.php";
+include_once "./header.php";
 // laod the userxml file
 $userxml = simplexml_load_file("../Data/Users/Users.xml");
 ?>
@@ -37,15 +37,6 @@ if (isset($_POST['register'])) {
     }
 }
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8 without BOM">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
 <form class="container p-4 border border-info" action="./login.php" method="post">
     <div class="row container col-md-6 m-auto">
         <label class="form-group m-auto">User Type(choose a role):<?php $typeerror?> </label>
@@ -97,6 +88,4 @@ if (isset($_POST['register'])) {
         </div>
     </div>
 </form>
-</body>
-</html>
 <?php include_once "footer.php";

@@ -1,5 +1,4 @@
 <?php session_start()?>
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8 without BOM">
@@ -11,7 +10,6 @@
     <link rel="shortcut icon" type="text/x-icon" href="../Views/favicon.ico">
     <title>WeSupport</title>
 </head>
-<body class="container-fluid p-0">
 <header>
     <nav class="navbar justify-content-center m-0" id="nav">
         <div class="navbar navbar-sm-collapse text-monospace" id="fixnav">
@@ -32,5 +30,3 @@ if (isset($_SESSION['id'])) {?>
         </div>
     </nav>
 </header>
-</body>
-</html>

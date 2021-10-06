@@ -1,5 +1,5 @@
 <?php
-include_once "../Views/header.php";
+include_once "./header.php";
 // load the user and ticket xml
 $ticketxml = simplexml_load_file("../Data/Tickets/Support_Tickets.xml");
 $userxml = simplexml_load_file("../Data/Users/Users.xml");
@@ -54,15 +54,6 @@ if (isset($_SESSION['id'])) {
         }
     }
 }?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8 without BOM">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
  <main id="main" class="mt-0 pt-0">
     <div id="ticketlist" class="container text-center mt-0 mb-0">
         <table class="table table-striped text-center table-responsive mx-auto my-0 p-0 pt-0">
@@ -85,6 +76,4 @@ if (isset($_SESSION['id'])) {
         </table>
     </div>
 </main>
-</body>
-</html>
 <?php include_once '../Views/footer.php'?>
