@@ -1,5 +1,5 @@
 <?php
-include_once ".header.php";
+include_once "../Views/header.php";
 // load the xml files
 $userxml = simplexml_load_file('../Data/Users/Users.xml');
 $ticketxml = simplexml_load_file('../Data/Tickets/Support_Tickets.xml');
