@@ -1,5 +1,5 @@
 <?php
-include_once '../Views/header.php';
+include_once './header.php';
 ?>
 <main role="main" class="m-0 text-light" id="cover">
     <h1 class="cover-heading text-monospace">Help has Arrived.</h1>
